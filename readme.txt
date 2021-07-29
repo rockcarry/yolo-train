@@ -28,7 +28,7 @@ classe 修改
 filters 修改 filters =（classes + 5) * 3
 
 anchors 修改
-使用 gen_anchors.py 计算 anchors 并修改 cfg
-python gen_anchors.py -filelist train.txt
-选取前面 6 个 anchors 值，然后乘以 32
+计算 anchors
+darknet.exe detector calc_anchors voc.data -num_of_clusters 6 -width 320 -height 320
+修改 cfg 中的 anchors
 
