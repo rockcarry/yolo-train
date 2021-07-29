@@ -23,3 +23,12 @@
 
 训练停止之后，你应该从 backup 中选择表现最好的 weight 文件，选择 mAP 或者 IoU 最高的
 
+
+classe 修改
+filters 修改 filters =（classes + 5) * 3
+
+anchors 修改
+使用 gen_anchors.py 计算 anchors 并修改 cfg
+python gen_anchors.py -filelist train.txt
+选取前面 6 个 anchors 值，然后乘以 32
+
